@@ -17,7 +17,7 @@
 
 ## ℹ️ About
 
-API Restful to obtain data temperature and humidity from the website [The Weather Channel](https://weather.com/), using stack with Python and Flask.
+API Restful to obtain data temperature and humidity from the website [The Weather Channel](https://weather.com/), using stack with Python and Flask. And send to the [prediction service](https://github.com/BiaChacon/prediction-service).
 
 ---
 
