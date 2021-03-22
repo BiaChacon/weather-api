@@ -17,7 +17,7 @@ def send_temperature():
     node = idNode[1].replace("'", "")
 
     obj = {
-        "id_node": idNode,
+        "id_node": idNode[1],
         "sensors": [
             {
                 "type": "temperature",
