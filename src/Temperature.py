@@ -22,10 +22,11 @@ class Temperature:
         contentHum = driver.find_elements_by_css_selector(
             "span[data-testid='PercentageValue']")
         valueT = contentHum[0].get_attribute('innerHTML')
-        print(valueT)
         humValue = valueT.replace("%", "")
         hum = float(humValue)
 
         driver.close()
+
+        print([temp,hum])
 
         return [temp,hum]
