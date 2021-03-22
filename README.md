@@ -25,7 +25,7 @@ API Restful to obtain data temperature and humidity from the website [The Weathe
 
 ### 👉 Pre-requisites
 
-Before you begin, you will need to have the following tools installed on your machine: [Git](https://git-scm.com), [python](https://www.python.org/) and [pip](https://pypi.org/project/pip/). In addition, it is good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/).
+Before you begin, you will need to have the following tools installed on your machine: [Git](https://git-scm.com), [Python](https://www.python.org/), [Pip](https://pypi.org/project/pip/), [GeckoDriver](https://github.com/mozilla/geckodriver) and [Firefox](https://www.mozilla.org/pt-BR/firefox/new/). In addition, it is good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/).
 
 #### 🏁 Start
 
