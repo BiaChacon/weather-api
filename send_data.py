@@ -8,4 +8,4 @@ while True:
     print(i)
     i = i+1
     print(response)
-    time.sleep(900)
+    time.sleep(60)
