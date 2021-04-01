@@ -6,9 +6,11 @@ from Temperature import Temperature
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET'])
 def check():
     return jsonify("ok")
+
 
 @app.route('/send', methods=['GET'])
 def send_temperature():
@@ -34,6 +36,30 @@ def send_temperature():
     response = requests.post(
         "https://prediction-service-api.herokuapp.com/add", headers={"content-type": "application/json"}, data=dado)
 
+    return jsonify(dado)
+
+
+@app.route('/now', methods=['GET'])
+def data_now():
+    data = Temperature.get_temperature()
+    idNode = str(request.query_string).split("=")
+    node = idNode[1].replace("'", "")
+
+    obj = {
+        "id_node": idNode[1],
+        "sensors": [
+            {
+                "type": "temperature",
+                "value": float(data[0])
+            },
+            {
+                "type": "humidity",
+                "value": float(data[1])
+            }
+        ],
+    }
+
+    dado = json.dumps(obj)
     return jsonify(dado)
 
 
