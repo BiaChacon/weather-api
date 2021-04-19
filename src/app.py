@@ -34,12 +34,12 @@ def send_temperature():
 
     dado = json.dumps(obj)
     response = requests.post(
-        "https://prediction-service-api.herokuapp.com/add", headers={"content-type": "application/json"}, data=dado)
+        "https://prediction-service-api.herokuapp.com/data", headers={"content-type": "application/json"}, data=dado)
 
     return jsonify(dado)
 
 
-@app.route('/now', methods=['GET'])
+@app.route('/data', methods=['GET'])
 def data_now():
     data = Temperature.get_temperature()
     idNode = str(request.query_string).split("=")
